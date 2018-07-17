@@ -3,8 +3,8 @@ name: Start LCMS Workflow - ReadMSData step
 description: An introduction on how to start the LCMS workflow
 
 steps:
-    - title: "How to import data from URL"
-      content: "This short tour will guide you through Galaxy's user interface to import data from an URL."
+    - title: "Start the LCMS workflow"
+      content: "This short tour will guide you through Galaxy's user interface to run the first step of the workflow."
       backdrop: true
 
     - title: "Import data"
@@ -16,23 +16,23 @@ steps:
 
     - title: "Import a collection"
       element: "#tab-collection"
-      content: "If you want to apply a workflow on a list of dataset, you can import your dataset in one collection"
+      content: "If you want to apply a workflow on a list of dataset, you can import your dataset in a collection."
       position: "bottom"
       postclick:
         - "#tab-collection"
 
-    - title: "To get data from an URL"
-      #element: "#btn-new"
+    - title: "Get data from a URL"
+#      element: "#btn-new"
       element: "#collection > div:nth-child(1) > div:nth-child(4) > button:nth-child(6)"
-      intro: "To import data from an URL, you should use the Paste/Fetch data option."
+      content: "To import data from a URL, you should use the Paste/Fetch data option."
       position: "top"
       postclick:
-        #- "#btn-new"
+#        - "#btn-new"
         - "#collection > div:nth-child(1) > div:nth-child(4) > button:nth-child(6)"
 
     - title: "Upload your data"
       element: ".upload-text-content"
-      intro: "Copy and paste URLs that lead to your data."
+      content: "Copy and paste URL that lead to your data."
       position: "bottom"
       textinsert: |
         https://raw.githubusercontent.com/RomainDallet/DataForGIT/master/data/Blanc04.mzXML
@@ -47,45 +47,45 @@ steps:
         https://raw.githubusercontent.com/RomainDallet/DataForGIT/master/data/QC1_003.mzXML
 
     - title: "Start the upload"
-      #element: "#btn-start"
+#      element: "#btn-start"
       element: "button.btn-primary:nth-child(3)"
-      intro: "Upload the data into your Galaxy history."
+      content: "Upload data into your Galaxy history."
       position: "top"
       postclick:
-        #- "#btn-start"
+#        - "#btn-start"
         - "button.btn-primary:nth-child(3)"
 
     - title: "Build your collection"
       element: "#btn-build"
-      intro: "When your datasets are imported, build a data collection containing all of them."
+      content: "When your datasets are imported, build a data collection containing all of them."
       position: "top"
       postclick:
         - "#btn-build"
 
     - title: "Name your collection"
       element: ".collection-name"
-      intro: "Give a name to your data collection."
+      content: "Give a name to your data collection."
       position: "bottom"
       textinsert: |
         My_Dataset
 
     - title: "Create your collection"
       element: ".create-collection"
-      intro: "Create the data collection."
+      content: "Create the data collection."
       position: "bottom"
       postclick:
         - ".create-collection"
 
-    - title: "Open category LCMS tools"
+    - title: "Open the category LCMS tools"
       element: "#title_lcms2 > a:nth-child(1)"
-      intro: "Deploy all the tools in the category LCMS."
+      content: "Deploy all the tools in the category LCMS."
       position: "right"
       postclick:
         - "#title_lcms2 > a:nth-child(1)"
 
     - title: "Run readMSData"
       element: a[href$="/tool_runner?tool_id=testtoolshed.g2.bx.psu.edu%2Frepos%2Flecorguille%2Fmsnbase_readmsdata%2Fmsnbase_readmsdata%2F2.4.0.0"]
-      intro: "Open the first tool of the workflow, readMSData from MSnbase."
+      content: "Open the first tool of the workflow, readMSData from MSnbase."
       position: "right"
       postclick:
         - >-
@@ -94,14 +94,14 @@ steps:
 
     - title: "Select dataset collection"
       element: "label.btn:nth-child(3)" 
-      intro: "Select dataset collection."
+      content: "Select your dataset collection."
       position: "bottom"
       postclick:
         - "label.btn:nth-child(3)"
 
     - title: "Run the tool"
       element: "#execute"
-      intro: "Run readMSData tool."
+      content: "Run readMSData tool."
       position: "right"
       postclick:
         - "#execute"
