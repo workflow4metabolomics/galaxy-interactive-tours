@@ -3,7 +3,7 @@ name: Import Shared History
 description: An introduction on how to import data from a shared history
 
 steps:
-    - title: "How to import data from URL"
+    - title: "How to import data from a shared history"
       content: "This short tour will guide you through Galaxy's user interface to import a published history."
       backdrop: true
 
@@ -19,14 +19,13 @@ steps:
       content: "Open published history menu."
       position: "right"
 
-    - title: "Here there are!"
+    - title: "Published histories menu"
       content: "Here, there is the list of all published histories."
-      preclick:
-        - 'li a[href$="/histories/list_published"]'
+      path: "/histories/list_published"
 
     - title: "Open FaahKO history"
       element: 'a[href$="/u/username/h/faahko"]'
-      content: "In this tutorial, we are going to test the import of the FaahKO history."
+      content: "In this tutorial, we are going to test the import of the FaahKO history. To open it, click on the history name"
       position: "bottom"
 
     - title: "FaahKO"

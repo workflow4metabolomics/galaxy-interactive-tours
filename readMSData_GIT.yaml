@@ -22,12 +22,12 @@ steps:
         - "#tab-collection"
 
     - title: "Get data from a URL"
-#      element: "#btn-new"
+      #element: "#btn-new"
       element: "#collection > div:nth-child(1) > div:nth-child(4) > button:nth-child(6)"
       content: "To import data from a URL, you should use the Paste/Fetch data option."
       position: "top"
       postclick:
-#        - "#btn-new"
+      #  - "#btn-new"
         - "#collection > div:nth-child(1) > div:nth-child(4) > button:nth-child(6)"
 
     - title: "Upload your data"
@@ -47,12 +47,12 @@ steps:
         https://raw.githubusercontent.com/RomainDallet/DataForGIT/master/data/QC1_003.mzXML
 
     - title: "Start the upload"
-#      element: "#btn-start"
+      #element: "#btn-start"
       element: "button.btn-primary:nth-child(3)"
       content: "Upload data into your Galaxy history."
       position: "top"
       postclick:
-#        - "#btn-start"
+      #  - "#btn-start"
         - "button.btn-primary:nth-child(3)"
 
     - title: "Build your collection"
@@ -106,5 +106,6 @@ steps:
       postclick:
         - "#execute"
 
+    #Ne fonctionne pas avec des liens en nom de fichier
     - title: "End of the tour"
       content: "Now, you should have a new collection '.raw.RData' from which you can continue the workflow."
