@@ -2,13 +2,7 @@
 
 ## List
 
-- Import a single file
-- Import a collection (from URL)
-- Import data and run the first tool of LCMS workflow
-- Import a shared history
-
-## TODO
-
-- Import Shared history :
-
-	- FaahKO history is local. Make this GIT generic.
+- Import a single file <!--galaxy_importdata.yaml [Yann]-->
+- Import a collection (from URL) <!--import_collection_from_URL.yaml [Romain]-->
+- Import a shared history <!--shared_history.yaml [Romain]-->
+- Run LCMS preprocessing workflow <!--LCMS_preprocessing.yaml [Romain]-->

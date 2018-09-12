@@ -106,6 +106,5 @@ steps:
       postclick:
         - "#execute"
 
-    #Ne fonctionne pas avec des liens en nom de fichier
     - title: "End of the tour"
       content: "Now, you should have a new collection '.raw.RData' from which you can continue the workflow."
