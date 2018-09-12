@@ -36,16 +36,16 @@ steps:
       content: "We will use a subset of LCMS Sacurine dataset (http://workflow4metabolomics.org/dataset_sacurine)."
       position: "bottom"
       textinsert: |
-        https://raw.githubusercontent.com/RomainDallet/DataForGIT/master/data/Blanc04.mzXML
-        https://raw.githubusercontent.com/RomainDallet/DataForGIT/master/data/Blanc06.mzXML
-        https://raw.githubusercontent.com/RomainDallet/DataForGIT/master/data/HU_neg_017.mzXML
-        https://raw.githubusercontent.com/RomainDallet/DataForGIT/master/data/HU_neg_028.mzXML
-        https://raw.githubusercontent.com/RomainDallet/DataForGIT/master/data/HU_neg_034.mzXML
-        https://raw.githubusercontent.com/RomainDallet/DataForGIT/master/data/HU_neg_051.mzXML
-        https://raw.githubusercontent.com/RomainDallet/DataForGIT/master/data/HU_neg_060.mzXML
-        https://raw.githubusercontent.com/RomainDallet/DataForGIT/master/data/QC1_001.mzXML
-        https://raw.githubusercontent.com/RomainDallet/DataForGIT/master/data/QC1_002.mzXML
-        https://raw.githubusercontent.com/RomainDallet/DataForGIT/master/data/QC1_003.mzXML
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/sacurine-neg-subset/Blanc04.mzXML
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/sacurine-neg-subset/Blanc06.mzXML
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/sacurine-neg-subset/HU_neg_017.mzXML
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/sacurine-neg-subset/HU_neg_028.mzXML
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/sacurine-neg-subset/HU_neg_034.mzXML
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/sacurine-neg-subset/HU_neg_051.mzXML
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/sacurine-neg-subset/HU_neg_060.mzXML
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/sacurine-neg-subset/QC1_001.mzXML
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/sacurine-neg-subset/QC1_002.mzXML
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/sacurine-neg-subset/QC1_003.mzXML
 
     - title: "Start the upload"
       #element: "#btn-start"
