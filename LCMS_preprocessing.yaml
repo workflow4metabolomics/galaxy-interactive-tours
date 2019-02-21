@@ -5,22 +5,18 @@ debug: true
 
 steps:
     - title: "LCMS preprocessing workflow"
-      content: "This tour will guide you through Galaxy's user interface to run the LCMS preprocessing workflow.<br>In this tour, we will use a W4M Sacurine dataset available <a href='http://workflow4metabolomics.org/dataset_sacurine'>here</a>."
+      content: "This tour will guide you through Galaxy's user interface to run the LCMS preprocessing workflow.<br>In this tour, we will use a W4M Sacurine dataset available <a target='_blank' href='http://workflow4metabolomics.org/dataset_sacurine'>here</a>."
       backdrop: true
 
     - title: "Import files"
       element: ".upload-button"
       content: "Galaxy supports many ways to get in your data. We are going to use this button to upload them."
       placement: "right"
-      postclick:
-        - ".upload-button"
 
     - title: "Get data from a URL"
       element: "#btn-new"
       content: "In this tour, we will import data from a URL, so we have to use the Paste/Fetch data option."
       position: "top"
-      postclick:
-        - "#btn-new"
 
     - title: "Upload sample metadata file"
       element: ".upload-text-content"
@@ -33,22 +29,16 @@ steps:
       element: "#btn-start"
       content: "Start uploading data into your Galaxy history."
       position: "top"
-      postclick:
-        - "#btn-start"
 
     - title: "Import mzXML files"
-      element: "#tab-collection"
+      element: "#tab-title-text-collection"
       content: "Then, we are going to import a dataset collection to apply the workflow on a list of mzXML datasets."
       position: "bottom"
-      postclick:
-        - "#tab-collection"
 
     - title: "Get data from a URL"
       element: "#btn-new"
       content: "Like before, we will use the Paste/Fetch data option to import mzXML files."
       position: "top"
-      postclick:
-        - "#btn-new"
 
     - title: "Upload mzXML files"
       element: ".upload-text-content"
@@ -70,15 +60,11 @@ steps:
       element: "#btn-start"
       content: "Start uploading data into your Galaxy history."
       position: "top"
-      postclick:
-        - "#btn-start"
 
     - title: "Build the collection"
       element: "#btn-build"
       content: "After the upload, it's time to build the data collection containing all of them."
       position: "top"
-      postclick:
-        - "#btn-build"
 
     - title: "Name the collection"
       element: ".collection-name"
@@ -91,41 +77,34 @@ steps:
       element: ".create-collection"
       content: "Create the data collection."
       position: "bottom"
-      postclick:
-        - ".create-collection"
 
-    - title: "Open the category LCMS preprocessing tools"
-      element: "#title_lcms2 > a:nth-child(1)"
-      #element: "#title_LCMS-preprocessing > a:nth-child(1)"
-      content: "Deploy all the tools in the category LCMS preprocessing."
+    - title: "LCMS preprocessing tools"
+      element: "#title_lcms2"
+      #element: "#title_LCMS-preprocessing"
+      content: "All the tools present in the category LCMS preprocessing."
       position: "right"
-      postclick:
-        - "#title_lcms2 > a:nth-child(1)"
-        #- "#title_LCMS-preprocessing > a:nth-child(1)"
+      preclick:
+         - "#title_lcms2 > a:nth-child(1)"
+      #   - "#title_LCMS-preprocessing > a:nth-child(1)"
 
     ### readMSData ###
     - title: "ReadMSData"
-      element: a[href$="/tool_runner?tool_id=testtoolshed.g2.bx.psu.edu%2Frepos%2Flecorguille%2Fmsnbase_readmsdata%2Fmsnbase_readmsdata%2F2.4.0.0"]
       content: "The first tool of the workflow is readMSData from MSnbase, it allow to import MS raw data files and generate MSnExp object for the rest of the workflow."
       position: "right"
-      postclick:
+      preclick:
         - >-
           a[href$="/tool_runner?tool_id=testtoolshed.g2.bx.psu.edu%2Frepos%2Flecorguille%2Fmsnbase_readmsdata%2Fmsnbase_readmsdata%2F2.4.0.0"]
           .tool-old-link
 
     - title: "Select the data collection"
-      element: "label.btn:nth-child(3)" 
+      element: "div[tour_id='input']"
       content: "Select your mzXML data collection."
-      position: "bottom"
-      postclick:
-        - "label.btn:nth-child(3)"
+      position: "right"
 
     - title: "Run the tool"
       element: "#execute"
       content: "Run readMSData tool."
       position: "right"
-      postclick:
-        - "#execute"
 
     - title: "Tool Running"
       content: "Please wait until the end of the tool before running the next."
@@ -133,47 +112,40 @@ steps:
 
     ### xcmsSet ###
     - title: "FindChromPeaks (xcmsSet)"
-      element: a[href$="/tool_runner?tool_id=testtoolshed.g2.bx.psu.edu%2Frepos%2Flecorguille%2Fxcms_xcmsset%2Fabims_xcms_xcmsSet%2F3.0.0.0"]
       content: "FindChromPeaks is used for preprocessing data from LCMS files using the xcms R package. It extracts ion from each sample independently and using a statistic model, peaks are filtered and integrated."
       position: "right"
-      postclick:
+      preclick:
         - >-
           a[href$="/tool_runner?tool_id=testtoolshed.g2.bx.psu.edu%2Frepos%2Flecorguille%2Fxcms_xcmsset%2Fabims_xcms_xcmsSet%2F3.0.0.0"]
           .tool-old-link
 
     - title: "Select the RData file"
-      element: "label.btn:nth-child(3)"
-      #element: "#uid-42 > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > label:nth-child(3)"
+      element: "div[tour_id='input']"
       content: "Select the raw.RData collection."
-      position: "bottom"
-      postclick:
-        - "label.btn:nth-child(3)"
-        #- "#uid-42 > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > label:nth-child(3)"
-
+      position: "right"
+      
     - title: "Extraction method"
-      element: "#field-uid-54"
+      element: "div[tour_id='methods|method']"
       content: "For these data, please select the CentWave algorithm as extraction method."
       position: "right"
 
     - title: "Min, Max peak width in seconds"
-      element: "#field-uid-58"
+      element: "div[tour_id='methods|peakwidth']"
       content: "Change the min, max peak width to 5,50"
       position: "right"
 
     - title: "Open Advanced options"
-      element: "#uid-59 > div:nth-child(1) > div:nth-child(2) > span:nth-child(2)"
+      element: "#uid-69 > div:nth-child(1) > div:nth-child(2) > span:nth-child(2)"
       content: "Deploy Advanced options menu."
-      position: "bottom"
-      postclick:
-        - "#uid-59 > div:nth-child(1) > div:nth-child(2) > span:nth-child(2)"
+      position: "right"
 
     - title: "Prefilter step for for the first analysis step (ROI detection)"
-      element: "#field-uid-74"
+      element: "div[tour_id='methods|CentWaveAdv|prefilter']"
       content: "Change the ROI detection to 3,500"
       position: "right"
 
     - title: "Minimum difference in m/z for peaks with overlapping retention times"
-      element: "#field-uid-79 > input:nth-child(1)"
+      element: "div[tour_id='methods|CentWaveAdv|mzdiff']"
       content: "Change it to 0.005"
       position: "right"
 
@@ -181,8 +153,6 @@ steps:
       element: "#execute"
       content: "Run FindChromPeaks (xcmsSet) tool."
       position: "right"
-      postclick:
-        - "#execute"
 
     - title: "Tool Running"
       content: "Please wait until the end of the tool before running the next."
@@ -190,34 +160,27 @@ steps:
 
     ### Merge ###
     - title: "FindChromPeaks Merger"
-      element: a[href$="/tool_runner?tool_id=testtoolshed.g2.bx.psu.edu%2Frepos%2Flecorguille%2Fxcms_merge%2Fxcms_merge%2F3.0.0.0"]
       content: "This tool will allow you to run one xcms findChromPeaks process per sample in parallel and then to merge all RData images in one."
       position: "right"
-      postclick:
+      preclick:
         - >-
           a[href$="/tool_runner?tool_id=testtoolshed.g2.bx.psu.edu%2Frepos%2Flecorguille%2Fxcms_merge%2Fxcms_merge%2F3.0.0.0"]
           .tool-old-link
 
     - title: "Select the RData file"
-      element: "#uid-7 > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > label:nth-child(2)"
+      element: "div[tour_id='input']"
       content: "Select your new raw.xset.RData data collection."
-      position: "bottom"
-      postclick:
-        - "#uid-7 > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > label:nth-child(2)"
+      position: "right"
 
     - title: "Select the sample metadata file"
-      element: "#s2id_uid-14_select > a:nth-child(1)"
+      element: "div[tour_id='sampleMetadata']"
       content: "Select the Sacurine sample metadata file."
       position: "right"
-      postclick:
-        - "#uid-14 > div:nth-child(3)"
 
     - title: "Run the tool"
       element: "#execute"
       content: "Run xcms findChromPeaks Merger tool."
       position: "right"
-      postclick:
-        - "#execute"
 
     - title: "Tool Running"
       content: "Please wait until the end of the tool before running the next."
@@ -225,27 +188,22 @@ steps:
 
     ### 1st Group ###
     - title: "GroupChromPeaks (group)"
-      element: a[href$="/tool_runner?tool_id=testtoolshed.g2.bx.psu.edu%2Frepos%2Flecorguille%2Fxcms_group%2Fabims_xcms_group%2F3.0.0.0"]
       content: "This tool groups the peaks which represent the same analyte across samples using overlapping m/z bins and calculation of smoothed peak distributions in chromatographic time."
       position: "right"
-      postclick:
+      preclick:
         - >-
           a[href$="/tool_runner?tool_id=testtoolshed.g2.bx.psu.edu%2Frepos%2Flecorguille%2Fxcms_group%2Fabims_xcms_group%2F3.0.0.0"]
           .tool-old-link
 
     - title: "Select the RData file"
-      element: "#uid-9"
+      element: "div[tour_id='input']"
       content: "Select the xset.merged data."
       position: "right"
-      postclick:
-        - "#uid-9 > div:nth-child(3)"
 
     - title: "Run the tool"
       element: "#execute"
       content: "Run GroupChromPeaks (group) tool."
       position: "right"
-      postclick:
-        - "#execute"
 
     - title: "Tool Running"
       content: "Please wait until the end of the tool before running the next."
@@ -253,21 +211,20 @@ steps:
 
     ### Retcor ###
     - title: "AdjustRtime (retcor)"
-      element: a[href$="/tool_runner?tool_id=testtoolshed.g2.bx.psu.edu%2Frepos%2Flecorguille%2Fxcms_retcor%2Fabims_xcms_retcor%2F3.0.0.0"]
       content: "After matching peaks into groups, AdjustRtime (retcor) can use those groups to identify and correct correlated drifts in retention time from run to run."
       position: "right"
-      postclick:
+      preclick:
         - >-
           a[href$="/tool_runner?tool_id=testtoolshed.g2.bx.psu.edu%2Frepos%2Flecorguille%2Fxcms_retcor%2Fabims_xcms_retcor%2F3.0.0.0"]
           .tool-old-link
 
     - title: "Select the RData file"
-      element: "#uid-9 > div:nth-child(3)"
+      element: "div[tour_id='image']"
       content: "Select the xset.merged.group data."
       position: "right"
 
     - title: "Minimum required fraction of samples in which peaks for the peak group were identified"
-      element: ".ui-form-slider-left"
+      element: "div[tour_id='methods|minFraction']"
       content: "Replace to 0.85"
       position: "right"
 
@@ -275,8 +232,6 @@ steps:
       element: "#execute"
       content: "Run AdjustRtime (retcor) tool."
       position: "right"
-      postclick:
-        - "#execute"
 
     - title: "Tool Running"
       content: "Please wait until the end of the tool before running the next."
@@ -284,34 +239,27 @@ steps:
 
     ### 2eme Group ###
     - title: "GroupChromPeaks (group)"
-      element: a[href$="/tool_runner?tool_id=testtoolshed.g2.bx.psu.edu%2Frepos%2Flecorguille%2Fxcms_group%2Fabims_xcms_group%2F3.0.0.0"]
       content: "This tool groups the peaks which represent the same analyte across samples using overlapping m/z bins and calculation of smoothed peak distributions in chromatographic time."
       position: "right"
-      postclick:
+      preclick:
         - >-
           a[href$="/tool_runner?tool_id=testtoolshed.g2.bx.psu.edu%2Frepos%2Flecorguille%2Fxcms_group%2Fabims_xcms_group%2F3.0.0.0"]
           .tool-old-link
 
     - title: "Select the RData file"
-      element: "#uid-9"
+      element: "div[tour_id='image']"
       content: "Select the xset.merged.group.retcor data."
       position: "right"
-      postclick:
-        - "#uid-9 > div:nth-child(3)"
 
     - title: "Get a Peak List"
-      element: "#field-uid-135 > div:nth-child(3) > label:nth-child(1)"
+      element: "div[tour_id='peaklist|peaklistBool']"
       content: "Click on 'YES' to get the peak list."
-      position: "right"
-      postclick:
-        - "#field-uid-135 > div:nth-child(3) > label:nth-child(1)"        
+      position: "right"     
 
     - title: "Run the tool"
       element: "#execute"
       content: "Run GroupChromPeaks (group) tool."
       position: "right"
-      postclick:
-        - "#execute"
 
     - title: "Tool Running"
       content: "Please wait until the end of the tool before running the next."
@@ -319,34 +267,27 @@ steps:
 
     ### FillPeaks ###
     - title: "FillPeaks"
-      element: a[href$="/tool_runner?tool_id=testtoolshed.g2.bx.psu.edu%2Frepos%2Flecorguille%2Fxcms_fillPeaks%2F3.0.0.0"]
       content: "This tool integrate areas of missing peaks."
       position: "right"
-      postclick:
+      preclick:
         - >-
-          a[href$="/tool_runner?tool_id=testtoolshed.g2.bx.psu.edu%2Frepos%2Flecorguille%2Fxcms_fillPeaks%2F3.0.0.0"]
+          a[href$="/tool_runner?tool_id=testtoolshed.g2.bx.psu.edu%2Frepos%2Flecorguille%2Fxcms_fillPeaks%2Fabims_xcms_fillPeaks%2F3.0.0.0"]
           .tool-old-link
 
     - title: "Select the RData file"
-      element: "#uid-9 > div:nth-child(3)"
-      content: "Select the xset.merged.group.retcor.group data."
+      element: "div[tour_id='image']"
+      content: "Select the xset.merged.group.retcor.group.Rdata."
       position: "right"
-      postclick:
-        - "#uid-9 > div:nth-child(3)"
 
     - title: "Get a Peak List"
-      element: "#field-uid-135 > div:nth-child(3) > label:nth-child(1)"
+      element: "div[tour_id='peaklist|peaklistBool']"
       content: "Click on 'YES' to get the peak list."
-      position: "right"
-      postclick:
-        - "#field-uid-135 > div:nth-child(3) > label:nth-child(1)"      
+      position: "right"     
 
     - title: "Run the tool"
       element: "#execute"
       content: "Run FillPeaks tool."
       position: "right"
-      postclick:
-        - "#execute"
 
     - title: "End of the tour"
       content: "Thank you for following this tour explaining how the pre-processing steps of the LCMS workflow works. Now, you can continue with statistic analysis and plot chromatogram building."
