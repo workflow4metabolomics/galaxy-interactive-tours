@@ -1,0 +1,83 @@
+id: share_history
+name: Share History
+description: An introduction on how to share your history
+
+steps:
+    - title: "How to share your history"
+      content: "This short tour will guide you through Galaxy's user interface to import a published history."
+      backdrop: true
+
+    - title: "Import files"
+      element: "#tab-title-text-collection"
+      content: "Then, we are going to import a dataset collection to apply the workflow on a list of mzXML datasets."
+      position: "bottom"
+
+    - title: "Get data from a URL"
+      element: "#btn-new"
+      content: "We will use the Paste/Fetch data option to import mzXML files."
+      position: "top"
+
+    - title: "Upload faahKO files"
+      element: ".upload-text-content"
+      content: "We will upload a subset of LCMS Sacurine dataset."
+      position: "bottom"
+      textinsert: |
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/faahKO/KO/ko15.CDF
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/faahKO/KO/ko16.CDF
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/faahKO/KO/ko18.CDF
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/faahKO/KO/ko19.CDF
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/faahKO/KO/ko21.CDF
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/faahKO/KO/ko22.CDF
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/faahKO/WT/wt15.CDF
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/faahKO/WT/wt16.CDF
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/faahKO/WT/wt18.CDF
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/faahKO/WT/wt19.CDF
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/faahKO/WT/wt21.CDF
+        https://raw.githubusercontent.com/workflow4metabolomics/galaxy-interactive-tours/master/data/faahKO/WT/wt22.CDF
+
+    - title: "Start the upload"
+      element: "#btn-start"
+      content: "Start uploading data into your Galaxy history."
+      position: "top"
+
+    - title: "Build the collection"
+      element: "#btn-build"
+      content: "After the upload, it's time to build the data collection containing all of them."
+      position: "top"
+
+    - title: "Name the collection"
+      element: ".collection-name"
+      content: "Give a name to the data collection."
+      position: "bottom"
+      textinsert: |
+        faahKO
+
+    - title: "Create the collection"
+      element: ".create-collection"
+      content: "Create the data collection."
+      position: "bottom"
+
+    - title: "Open history options"
+      element: "#history-options-button"
+      content: "Open history options panel."
+      position: "left"
+
+    - title: "Share and publish"
+      element: "#history-options-button-menu li a[href$='/history/sharing']"
+      content: "Open shared and published options."
+      position: "left"
+
+    - title: "Share via link"
+      element: "input.action-button:nth-child(1)"
+      content: "Share your history via a link."
+      position: "top"
+
+    - title: "Publish"
+      element: "input.action-button:nth-child(4)"
+      content: "Publish and make your history public."
+      position: "top"
+
+    - title: "Share with a user"
+      element: "a.action-button > span:nth-child(1)"
+      content: "Share your history with another user."
+      position: "top"
