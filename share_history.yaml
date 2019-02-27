@@ -4,10 +4,15 @@ description: An introduction on how to share your history
 
 steps:
     - title: "How to share your history"
-      content: "This short tour will guide you through Galaxy's user interface to import a published history."
+      content: "This short tour will guide you through Galaxy's user interface to share your current history."
       backdrop: true
 
     - title: "Import files"
+      element: ".upload-button"
+      content: "Galaxy supports many ways to get in your data. We are going to use this button to upload them."
+      placement: "right"
+
+    - title: "Import a collection"
       element: "#tab-title-text-collection"
       content: "Then, we are going to import a dataset collection to apply the workflow on a list of mzXML datasets."
       position: "bottom"
@@ -58,26 +63,27 @@ steps:
       position: "bottom"
 
     - title: "Open history options"
-      element: "#history-options-button"
-      content: "Open history options panel."
+      element: "#right > div:nth-child(1)" #history-options-button
+      content: "Open history options panel and open shared and published options."
       position: "left"
 
-    - title: "Share and publish"
-      element: "#history-options-button-menu li a[href$='/history/sharing']"
-      content: "Open shared and published options."
-      position: "left"
+    - title: "Share and Publish"
+      content: "From this page, now you can share or publish your history"
+      backdrop: true
 
-    - title: "Share via link"
-      element: "input.action-button:nth-child(1)"
-      content: "Share your history via a link."
-      position: "top"
+    #- title: "Share via link"
+      #element: "input[value='Make History Accessible via Link']"
+      #element: ".action-button[name='make_accessible_via_link']"
+      #content: "Share your history via a link."
+      #position: "top"
 
-    - title: "Publish"
-      element: "input.action-button:nth-child(4)"
-      content: "Publish and make your history public."
-      position: "top"
+    #- title: "Publish"
+      #element: "input[value='Make History Accessible and Publish']" 
+      #element: ".action-button[name='make_accessible_and_publish']"
+      #content: "Publish and make your history public."
+      #position: "top"
 
-    - title: "Share with a user"
-      element: "a.action-button > span:nth-child(1)"
-      content: "Share your history with another user."
-      position: "top"
+    #- title: "Share with a user"
+      #element: "a.action-button > span:nth-child(1)"
+      #content: "Share your history with another user."
+      #position: "top"
