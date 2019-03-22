@@ -1,6 +1,8 @@
 id: import_shared_history
 name: Import Shared History
 description: An introduction on how to import data from a shared history
+tags:
+    - "history"
 
 steps:
     - title: "How to import data from a shared history"

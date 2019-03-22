@@ -1,6 +1,8 @@
 id: import_collection_from_URL
 name: Import dataset collection from a URL
 description: An introduction on how to import a dataset collection from a URL
+tags:
+    - "history"
 
 steps:
     - title: "How to import data from a URL in a collection"

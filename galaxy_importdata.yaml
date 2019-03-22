@@ -1,7 +1,7 @@
 ﻿id: galaxy_importdata
-name: Galaxy  Import Data
+name: Galaxy Import Data
 description: A gentle introduction to the Galaxy User Interface for uploading data
-title_default: Welcome to Galaxy
+title_default: "Welcome to Galaxy"
 steps:
   - title: Welcome to Galaxy Interactive tour: How to Upload Data
     content: >-
